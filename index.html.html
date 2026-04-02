@@ -1,0 +1,2269 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fresh Beginning SRL – Consultanță în Afaceri | Business Consulting Romania</title>
+  <meta name="description" content="Consultanță profesională pentru înființare firme, redactare contracte, modificări juridice și administrare legală a afacerilor în România. Partenerul tău de încredere pentru un start corect și legal." />
+  <meta name="keywords" content="infiintare firma Romania, consultanta afaceri, PFA SRL, autorizatii, contracte comerciale, fresh beginning srl" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── CSS Variables ─────────────────────────────────── */
+    :root {
+      --emerald:    #1a6b50;
+      --emerald-dk: #124a38;
+      --emerald-lt: #e8f5ef;
+      --gold:       #b8963e;
+      --gold-lt:    #f5edd8;
+      --cream:      #faf9f7;
+      --white:      #ffffff;
+      --ink:        #1c1c1c;
+      --ink-muted:  #5a5a5a;
+      --border:     #e2e2dc;
+      --shadow:     0 8px 40px rgba(26,107,80,0.10);
+      --shadow-lg:  0 20px 60px rgba(26,107,80,0.14);
+      --radius:     4px;
+      --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* ─── Reset & Base ───────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ─── Typography ─────────────────────────────────────── */
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+    h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h2 { font-size: clamp(1.9rem, 3.5vw, 3rem); }
+    h3 { font-size: clamp(1.3rem, 2vw, 1.7rem); }
+    p  { font-size: 1rem; color: var(--ink-muted); }
+
+    /* ─── Utilities ──────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    .section    { padding: 108px 0; }
+    .section--alt { background: var(--white); }
+    .section--dark { background: var(--emerald-dk); color: var(--white); }
+    .section--dark h2, .section--dark h3, .section--dark p { color: var(--white); }
+    .section--dark p { opacity: .85; }
+
+    .gold-line {
+      display: block;
+      width: 48px; height: 2px;
+      background: var(--gold);
+      margin-bottom: 20px;
+    }
+    .label {
+      font-size: .75rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+    }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+    /* ─── Buttons ────────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 32px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .9rem; font-weight: 500;
+      letter-spacing: .04em;
+      border: none; cursor: pointer;
+      border-radius: var(--radius);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--emerald);
+      color: var(--white);
+      letter-spacing: .06em;
+    }
+    .btn-primary:hover {
+      background: var(--emerald-dk);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--white);
+    }
+    .btn-gold:hover {
+      background: #9b7c32;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(184,150,62,0.3);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--emerald);
+      border: 1.5px solid var(--emerald);
+    }
+    .btn-outline:hover {
+      background: var(--emerald);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.5);
+    }
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--white);
+    }
+
+    /* ─── Language Switcher ──────────────────────────────── */
+    .lang-switcher {
+      display: flex; gap: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 3px;
+    }
+    .lang-btn {
+      padding: 4px 12px;
+      font-size: .75rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      border-radius: 16px;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: rgba(255,255,255,0.7);
+      transition: var(--transition);
+      font-family: 'DM Sans', sans-serif;
+    }
+    .lang-btn.active {
+      background: var(--white);
+      color: var(--emerald);
+    }
+
+    /* ─── Navigation ─────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(26,75,56,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: var(--transition);
+    }
+    nav.scrolled {
+      background: rgba(18,74,56,0.99);
+      box-shadow: 0 2px 30px rgba(0,0,0,0.15);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .nav-logo-mark {
+      width: 36px; height: 36px;
+      background: var(--gold);
+      border-radius: 2px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-weight: 600;
+      color: var(--white);
+    }
+    .nav-logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; font-weight: 500;
+      color: var(--white);
+      line-height: 1.1;
+    }
+    .nav-logo-text span { display: block; font-size: .7rem; letter-spacing: .12em; opacity: .65; font-family: 'DM Sans', sans-serif; font-weight: 300; text-transform: uppercase; }
+    .nav-links {
+      display: flex; align-items: center; gap: 36px;
+    }
+    .nav-links a {
+      font-size: .88rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: .02em;
+      transition: var(--transition);
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 1px; background: var(--gold);
+      transform: scaleX(0);
+      transition: var(--transition);
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-cta { display: flex; align-items: center; gap: 16px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+    .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--white); transition: var(--transition); }
+    .mobile-menu {
+      display: none;
+      position: fixed; top: 72px; left: 0; right: 0;
+      background: var(--emerald-dk);
+      padding: 24px;
+      z-index: 999;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a { display: block; padding: 12px 0; color: rgba(255,255,255,0.85); border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 1rem; }
+    .mobile-menu .lang-switcher { margin-top: 16px; background: rgba(255,255,255,0.05); }
+
+    /* ─── Hero ───────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--emerald-dk) 0%, #1a6b50 60%, #1e8060 100%);
+      display: flex; align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero::after {
+      content: '';
+      position: absolute; right: -200px; top: 50%; transform: translateY(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(184,150,62,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+      position: relative; z-index: 1;
+    }
+    .hero-eyebrow {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 24px;
+    }
+    .hero-eyebrow-line { width: 32px; height: 1px; background: var(--gold); }
+    .hero-eyebrow span { font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,0.6); font-weight: 400; }
+    .hero h1 {
+      color: var(--white);
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 40px;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 56px; }
+    .hero-stats { display: flex; gap: 40px; }
+    .hero-stat { }
+    .hero-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 500;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .hero-stat-label { font-size: .78rem; color: rgba(255,255,255,0.55); margin-top: 4px; }
+    .hero-visual {
+      position: relative;
+    }
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 40px;
+    }
+    .hero-card-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold);
+      color: var(--white);
+      font-size: .75rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+    }
+    .hero-card-badge::before { content: '✦'; font-size: .6rem; }
+    .hero-card h3 { color: var(--white); margin-bottom: 20px; font-size: 1.3rem; }
+    .hero-checklist { display: flex; flex-direction: column; gap: 14px; }
+    .hero-check-item {
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .hero-check-icon {
+      width: 22px; height: 22px;
+      background: rgba(184,150,62,0.2);
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+      font-size: .7rem; color: var(--gold);
+    }
+    .hero-check-item p { color: rgba(255,255,255,0.8); font-size: .92rem; }
+    .hero-card-cta {
+      margin-top: 28px; padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .hero-card-cta p { font-size: .8rem; color: rgba(255,255,255,0.5); }
+    .floating-badge {
+      position: absolute; top: -20px; right: -20px;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: var(--shadow-lg);
+    }
+    .floating-badge p { color: var(--emerald); font-size: .8rem; font-weight: 500; }
+    .floating-badge strong { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--emerald); }
+
+    /* ─── Trust Bar ──────────────────────────────────────── */
+    .trust-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0;
+    }
+    .trust-bar-inner {
+      display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;
+    }
+    .trust-item { display: flex; align-items: center; gap: 10px; }
+    .trust-icon {
+      width: 40px; height: 40px;
+      background: var(--emerald-lt);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .trust-item p { font-size: .85rem; font-weight: 500; color: var(--ink); }
+    .trust-item span { font-size: .75rem; color: var(--ink-muted); display: block; }
+    .trust-divider { width: 1px; height: 40px; background: var(--border); }
+
+    /* ─── About ──────────────────────────────────────────── */
+    .about-text p { margin-bottom: 20px; font-size: 1.05rem; line-height: 1.9; }
+    .about-text p:last-child { margin-bottom: 0; }
+    .about-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 32px; }
+    .pill {
+      padding: 8px 18px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      font-size: .82rem;
+      color: var(--emerald);
+      font-weight: 500;
+      background: var(--emerald-lt);
+      transition: var(--transition);
+    }
+    .pill:hover { background: var(--emerald); color: var(--white); border-color: var(--emerald); }
+    .about-image {
+      position: relative;
+    }
+    .about-img-wrap {
+      border-radius: 12px;
+      overflow: hidden;
+      height: 480px;
+      display: flex; align-items: stretch;
+      position: relative;
+    }
+    .about-img-placeholder {
+      text-align: center;
+      padding: 40px;
+    }
+    .about-img-placeholder .icon { font-size: 4rem; margin-bottom: 16px; }
+    .about-img-placeholder p { color: var(--emerald); font-size: .9rem; }
+    .about-badge {
+      position: absolute; bottom: -24px; left: -24px;
+      background: var(--emerald);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 24px 28px;
+      box-shadow: var(--shadow-lg);
+    }
+    .about-badge-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem; font-weight: 500;
+      line-height: 1;
+      color: var(--gold);
+    }
+    .about-badge p { font-size: .8rem; color: rgba(255,255,255,0.75); margin-top: 4px; }
+
+    /* ─── Why Choose Us ──────────────────────────────────── */
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); border-radius: 12px; overflow: hidden; }
+    .why-item {
+      background: var(--white);
+      padding: 44px 36px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .why-item::before {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--emerald);
+      transform: scaleX(0);
+      transition: var(--transition);
+    }
+    .why-item:hover::before { transform: scaleX(1); }
+    .why-item:hover { background: var(--cream); }
+    .why-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem; font-weight: 300;
+      color: var(--emerald-lt);
+      line-height: 1;
+      margin-bottom: 20px;
+      transition: var(--transition);
+    }
+    .why-item:hover .why-num { color: rgba(26,107,80,0.15); }
+    .why-item h3 { margin-bottom: 12px; font-size: 1.2rem; }
+    .why-item p { font-size: .9rem; }
+
+    /* ─── Services ───────────────────────────────────────── */
+    /* ─── Services Category Grid ─────────────────────────── */
+    /* Premium category badge inside card */
+    .svc-cat-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: .68rem; font-weight: 600; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .svc-cat-badge::before {
+      content: '';
+      display: inline-block; width: 20px; height: 1px;
+      background: var(--gold);
+    }
+    /* Highlighted featured service card */
+    .svc-card.svc-featured {
+      background: linear-gradient(145deg, var(--emerald-dk) 0%, #1a6b50 100%);
+      border-color: transparent;
+      color: var(--white);
+    }
+    .svc-card.svc-featured h3 { color: var(--white); }
+    .svc-card.svc-featured > p { color: rgba(255,255,255,0.78); }
+    .svc-card.svc-featured .svc-cat-badge { color: var(--gold); }
+    .svc-card.svc-featured .svc-icon { background: rgba(255,255,255,0.12); }
+    .svc-card.svc-featured .svc-item { color: rgba(255,255,255,0.82); }
+    .svc-card.svc-featured .svc-item::before { color: var(--gold); }
+    .svc-card.svc-featured .btn-outline {
+      border-color: rgba(255,255,255,0.4); color: var(--white);
+    }
+    .svc-card.svc-featured .btn-outline:hover {
+      background: rgba(255,255,255,0.15); border-color: var(--white);
+    }
+    /* Mid-page inline CTA strip */
+    .inline-cta {
+      background: var(--emerald-lt);
+      border: 1px solid rgba(26,107,80,0.15);
+      border-radius: 12px;
+      padding: 32px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px; flex-wrap: wrap;
+      margin: 56px 0 0;
+    }
+    .inline-cta-text h3 { font-size: 1.3rem; margin-bottom: 6px; }
+    .inline-cta-text p { font-size: .9rem; }
+    .inline-cta-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: var(--white);
+      font-size: .75rem; font-weight: 600; letter-spacing: .08em;
+      padding: 5px 14px; border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    /* Our Approach / Commitment section */
+    .approach-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 2px; background: var(--border); border-radius: 12px; overflow: hidden;
+      margin-top: 48px;
+    }
+    .approach-item {
+      background: var(--white); padding: 40px 36px;
+      display: flex; gap: 20px; align-items: flex-start;
+      transition: var(--transition);
+    }
+    .approach-item:hover { background: var(--cream); }
+    .approach-icon-wrap {
+      width: 48px; height: 48px; flex-shrink: 0;
+      background: var(--emerald-lt); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      transition: var(--transition);
+    }
+    .approach-item:hover .approach-icon-wrap { background: var(--emerald); }
+    .approach-item h4 {
+      font-size: 1.05rem; font-family: 'DM Sans', sans-serif;
+      font-weight: 600; margin-bottom: 8px; color: var(--ink);
+    }
+    .approach-item p { font-size: .88rem; line-height: 1.7; }
+    @media (max-width: 768px) { .approach-grid { grid-template-columns: 1fr; } .inline-cta { flex-direction: column; text-align: center; } }
+    .services-intro { max-width: 640px; margin-bottom: 64px; }
+    .svc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .svc-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 36px 32px 32px;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .svc-card::after {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--emerald), var(--gold));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+    .svc-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: transparent; }
+    .svc-card:hover::after { transform: scaleX(1); }
+    .svc-icon {
+      width: 52px; height: 52px;
+      background: var(--emerald-lt);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      transition: var(--transition);
+    }
+    .svc-card:hover .svc-icon { background: var(--emerald); }
+    .svc-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .svc-card > p {
+      font-size: .83rem;
+      margin-bottom: 24px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+    .svc-list {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .svc-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .85rem;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+    .svc-item::before {
+      content: '→';
+      color: var(--gold);
+      font-size: .8rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .svc-card .btn {
+      width: 100%;
+      justify-content: center;
+      font-size: .82rem;
+      padding: 11px 20px;
+    }
+    .svc-note {
+      margin-top: 48px;
+      background: var(--emerald-lt);
+      border-left: 3px solid var(--emerald);
+      padding: 20px 28px;
+      border-radius: 0 8px 8px 0;
+    }
+    .svc-note p { font-size: .9rem; color: var(--emerald-dk); }
+    .svc-note p em { font-style: italic; color: var(--emerald); font-weight: 500; }
+    @media (max-width: 1024px) { .svc-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 600px) { .svc-grid { grid-template-columns: 1fr; } }
+
+    /* ─── Process ────────────────────────────────────────── */
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+    .process-steps::before {
+      content: '';
+      position: absolute; top: 28px; left: calc(12.5% + 16px); right: calc(12.5% + 16px);
+      height: 1px; background: var(--border);
+    }
+    .process-step { text-align: center; padding: 0 16px; }
+    .process-num {
+      width: 56px; height: 56px;
+      background: var(--white);
+      border: 2px solid var(--emerald);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; font-weight: 500;
+      color: var(--emerald);
+      position: relative; z-index: 1;
+      background: var(--cream);
+    }
+    .process-step h4 { font-size: 1rem; font-family: 'DM Sans', sans-serif; font-weight: 600; margin-bottom: 8px; }
+    .process-step p { font-size: .85rem; }
+
+    /* ─── Blog ───────────────────────────────────────────── */
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .blog-grid-wide { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .blog-grid-wide .blog-card:nth-child(4) { grid-column: 1 / 2; }
+    .blog-grid-wide .blog-card:nth-child(5) { grid-column: 2 / 3; }
+    .blog-card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .blog-img {
+      height: 200px;
+      background: linear-gradient(135deg, var(--emerald-lt), var(--gold-lt));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem;
+    }
+    .blog-body { padding: 28px; }
+    .blog-cat {
+      font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--gold); font-weight: 600; margin-bottom: 10px;
+    }
+    .blog-body h3 { font-size: 1.2rem; margin-bottom: 10px; line-height: 1.4; }
+    .blog-body p { font-size: .88rem; margin-bottom: 20px; }
+    .blog-meta { display: flex; align-items: center; justify-content: space-between; }
+    .blog-date { font-size: .78rem; color: var(--ink-muted); }
+    .blog-link { font-size: .82rem; color: var(--emerald); font-weight: 500; display: flex; align-items: center; gap: 4px; }
+    .blog-link:hover { gap: 8px; }
+
+    /* ─── CTA Banner ─────────────────────────────────────── */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--emerald-dk), #1a6b50);
+      position: relative; overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute; right: -100px; top: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(184,150,62,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cta-inner { position: relative; z-index: 1; text-align: center; padding: 80px 0; }
+    .cta-inner h2 { color: var(--white); margin-bottom: 16px; font-weight: 300; }
+    .cta-inner h2 em { color: var(--gold); font-style: italic; }
+    .cta-inner p { color: rgba(255,255,255,0.75); margin-bottom: 40px; font-size: 1.1rem; max-width: 580px; margin-left: auto; margin-right: auto; }
+    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── Contact ────────────────────────────────────────── */
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; }
+    .contact-info h2 { margin-bottom: 16px; }
+    .contact-info > p { margin-bottom: 40px; font-size: 1.05rem; }
+    .contact-items { display: flex; flex-direction: column; gap: 24px; margin-bottom: 40px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 16px; }
+    .contact-icon {
+      width: 44px; height: 44px;
+      background: var(--emerald-lt);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-item-text strong { display: block; font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--emerald); font-weight: 600; margin-bottom: 4px; }
+    .contact-item-text a, .contact-item-text p { font-size: .95rem; color: var(--ink); }
+    .contact-item-text a:hover { color: var(--emerald); }
+    .contact-guarantee {
+      background: var(--emerald-lt);
+      border-left: 3px solid var(--emerald);
+      padding: 20px 24px;
+      border-radius: 0 8px 8px 0;
+    }
+    .contact-guarantee p { font-size: .88rem; color: var(--emerald-dk); }
+    .contact-guarantee strong { color: var(--emerald); }
+
+    /* Form */
+    .contact-form-wrap {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    .contact-form-wrap h3 { margin-bottom: 8px; font-size: 1.5rem; }
+    .contact-form-wrap > p { margin-bottom: 32px; font-size: .9rem; }
+    .form-group { margin-bottom: 20px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    label { display: block; font-size: .8rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 8px; }
+    input, textarea, select {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .92rem;
+      color: var(--ink);
+      background: var(--cream);
+      transition: var(--transition);
+      outline: none;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--emerald);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(26,107,80,0.08);
+    }
+    textarea { resize: vertical; min-height: 120px; }
+    .form-consent { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 24px; }
+    .form-consent input[type=checkbox] { width: auto; margin-top: 3px; flex-shrink: 0; }
+    .form-consent label { text-transform: none; letter-spacing: 0; font-size: .82rem; font-weight: 400; }
+    .form-success {
+      display: none;
+      background: var(--emerald-lt);
+      border: 1px solid var(--emerald);
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: .9rem;
+      color: var(--emerald-dk);
+      margin-top: 16px;
+    }
+
+    /* ─── Testimonials ───────────────────────────────────── */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .testimonial-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px 32px;
+      position: relative;
+      transition: var(--transition);
+    }
+    .testimonial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .testimonial-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem; line-height: 1;
+      color: var(--emerald-lt);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .testimonial-text {
+      font-size: .95rem;
+      line-height: 1.8;
+      color: var(--ink-muted);
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .testimonial-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--emerald), var(--gold));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; color: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .testimonial-name { font-size: .9rem; font-weight: 600; color: var(--ink); }
+    .testimonial-role { font-size: .78rem; color: var(--ink-muted); }
+    .testimonial-stars { color: var(--gold); font-size: .85rem; margin-bottom: 16px; letter-spacing: 2px; }
+
+    /* ─── Mobile Sticky CTA ──────────────────────────────── */
+    .mobile-sticky-cta {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0;
+      z-index: 800;
+      background: var(--emerald-dk);
+      padding: 12px 20px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      gap: 10px;
+    }
+    .mobile-sticky-cta a {
+      flex: 1;
+      text-align: center;
+      padding: 11px 8px;
+      border-radius: var(--radius);
+      font-size: .82rem;
+      font-weight: 600;
+      font-family: 'DM Sans', sans-serif;
+      transition: var(--transition);
+    }
+    .mobile-sticky-cta .cta-call {
+      background: var(--gold);
+      color: var(--white);
+    }
+    .mobile-sticky-cta .cta-whatsapp {
+      background: #25D366;
+      color: var(--white);
+    }
+    .mobile-sticky-cta .cta-form {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.4);
+    }
+    @media (max-width: 768px) {
+      .mobile-sticky-cta { display: flex; }
+      body { padding-bottom: 68px; }
+      .whatsapp-fab { bottom: 84px; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 1024px) {
+      .testimonials-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ─── Footer ─────────────────────────────────────────── */
+    footer {
+      background: #0e3529;
+      color: rgba(255,255,255,0.7);
+      padding: 72px 0 32px;
+    }
+    .footer-top {
+      display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px; padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 32px;
+    }
+    .footer-brand {}
+    .footer-logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem; font-weight: 500;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .footer-logo-sub { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); opacity: .8; }
+    .footer-brand p { margin-top: 20px; font-size: .88rem; line-height: 1.8; }
+    .footer-col h4 { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--white); font-family: 'DM Sans', sans-serif; font-weight: 600; margin-bottom: 20px; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { font-size: .88rem; color: rgba(255,255,255,0.6); transition: var(--transition); }
+    .footer-col ul li a:hover { color: var(--gold); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-bottom p { font-size: .8rem; }
+    .footer-gold { color: var(--gold); }
+
+    /* ─── WhatsApp Floating ──────────────────────────────── */
+    .whatsapp-fab {
+      position: fixed; bottom: 32px; right: 32px;
+      width: 56px; height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+      z-index: 900;
+      transition: var(--transition);
+      font-size: 1.5rem;
+    }
+    .whatsapp-fab:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37,211,102,0.5); }
+
+    /* ─── Scroll Animations ──────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
+    .reveal-delay-4 { transition-delay: .4s; }
+
+    /* ─── Responsive ─────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .grid-2, .hero-inner, .about-img-wrap { grid-template-columns: 1fr; }
+      .hero-inner { gap: 48px; }
+      .grid-3, .why-grid, .packages-grid, .blog-grid { grid-template-columns: 1fr 1fr; }
+      .grid-4, .process-steps { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .contact-wrap { grid-template-columns: 1fr; }
+      .service-panel.active { grid-template-columns: 1fr; }
+      .about-badge { bottom: 20px; left: 20px; }
+    }
+    @media (max-width: 768px) {
+      .section { padding: 72px 0; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .grid-3, .packages-grid, .blog-grid, .why-grid, .grid-4, .process-steps { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .hero-stats { gap: 24px; }
+      .trust-bar-inner .trust-divider { display: none; }
+      .trust-bar-inner { justify-content: flex-start; gap: 20px; }
+      .hero-visual { display: none; }
+      .contact-form-wrap { padding: 28px; }
+    }
+    @media (max-width: 480px) {
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+    }
+
+    /* ─── Language Toggle ─────────────────────────────────── */
+    [data-lang="en"] { display: none; }
+    body.lang-en [data-lang="ro"] { display: none; }
+    body.lang-en [data-lang="en"] { display: revert; }
+  </style>
+</head>
+
+<body>
+
+<!-- ─── Navigation ──────────────────────────────────── -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <div class="nav-logo-mark">FB</div>
+        <div class="nav-logo-text">
+          Fresh Beginning
+          <span>Business Consulting · SRL</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="#about" data-lang="ro">Despre noi</a>
+        <a href="#about" data-lang="en">About</a>
+        <a href="#services" data-lang="ro">Servicii</a>
+        <a href="#services" data-lang="en">Services</a>
+        <a href="#approach" data-lang="ro">Angajament</a>
+        <a href="#approach" data-lang="en">Our Approach</a>
+        <a href="#blog" data-lang="ro">Articole</a>
+        <a href="#blog" data-lang="en">Articles</a>
+        <a href="#contact" data-lang="ro">Contact</a>
+        <a href="#contact" data-lang="en">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <div class="lang-switcher">
+          <button class="lang-btn active" onclick="setLang('ro')">RO</button>
+          <button class="lang-btn" onclick="setLang('en')">EN</button>
+        </div>
+        <a href="#contact" class="btn btn-gold" data-lang="ro">Consultație gratuită</a>
+        <a href="#contact" class="btn btn-gold" data-lang="en">Free Consultation</a>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()" data-lang="ro">Despre noi</a>
+  <a href="#about" onclick="toggleMenu()" data-lang="en">About</a>
+  <a href="#services" onclick="toggleMenu()" data-lang="ro">Servicii</a>
+  <a href="#services" onclick="toggleMenu()" data-lang="en">Services</a>
+  <a href="#approach" onclick="toggleMenu()" data-lang="ro">Angajamentul nostru</a>
+  <a href="#approach" onclick="toggleMenu()" data-lang="en">Our Approach</a>
+  <a href="#blog" onclick="toggleMenu()" data-lang="ro">Articole</a>
+  <a href="#blog" onclick="toggleMenu()" data-lang="en">Articles</a>
+  <a href="#contact" onclick="toggleMenu()" data-lang="ro">Contact</a>
+  <a href="#contact" onclick="toggleMenu()" data-lang="en">Contact</a>
+  <a href="tel:+40723395929" style="color:var(--gold)!important; font-weight:600; display:flex; align-items:center; gap:8px;" onclick="toggleMenu()">📞 +40 723 395 929</a>
+  <div class="lang-switcher" style="margin-top:16px;">
+    <button class="lang-btn active" onclick="setLang('ro')">RO</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+  </div>
+</div>
+
+<!-- ─── Hero ─────────────────────────────────────────── -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow-line"></div>
+          <span data-lang="ro">Partenerul tău juridic și administrativ de încredere</span>
+          <span data-lang="en">Your trusted legal & administrative partner</span>
+        </div>
+        <h1 data-lang="ro">
+          Ne ocupăm noi de tot ce e legal.<br>
+          <em>Tu te concentrezi pe afacerea ta.</em>
+        </h1>
+        <h1 data-lang="en">
+          We handle everything legal.<br>
+          <em>You focus on your business.</em>
+        </h1>
+        <p class="hero-sub" data-lang="ro">
+          Înregistrare firme, autorizații, contracte comerciale, modificări juridice, documente oficiale — gestionăm tot, corect și complet, fără riscuri juridice pentru tine.
+        </p>
+        <p class="hero-sub" data-lang="en">
+          Company registration, permits, commercial contracts, legal modifications, official documents — we handle everything, accurately and completely, with zero legal risk for you.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-gold" data-lang="ro">Solicită o consultație gratuită →</a>
+          <a href="#contact" class="btn btn-gold" data-lang="en">Request a free consultation →</a>
+          <a href="tel:+40723395929" class="btn btn-outline-white" data-lang="ro">📞 +40 723 395 929</a>
+          <a href="tel:+40723395929" class="btn btn-outline-white" data-lang="en">📞 +40 723 395 929</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num">24h</div>
+            <div class="hero-stat-label" data-lang="ro">Răspundem în maxim 24h</div>
+            <div class="hero-stat-label" data-lang="en">We respond within 24h</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">100%</div>
+            <div class="hero-stat-label" data-lang="ro">Conformitate legală garantată</div>
+            <div class="hero-stat-label" data-lang="en">Guaranteed legal compliance</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">0</div>
+            <div class="hero-stat-label" data-lang="ro">Costuri ascunse</div>
+            <div class="hero-stat-label" data-lang="en">Hidden costs</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="floating-badge">
+          <p data-lang="ro">Sună acum</p>
+          <p data-lang="en">Call now</p>
+          <strong style="font-size:1rem; letter-spacing:.02em;">+40 723 395 929</strong>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-badge" data-lang="ro">Servicii complete</div>
+          <div class="hero-card-badge" data-lang="en">Complete services</div>
+          <h3 data-lang="ro">Ce facem pentru tine</h3>
+          <h3 data-lang="en">What we do for you</h3>
+          <div class="hero-checklist">
+            <div class="hero-check-item">
+              <div class="hero-check-icon">✓</div>
+              <p data-lang="ro">Înregistrare SRL, PFA, II, IF și Asociații</p>
+              <p data-lang="en">Registration of SRL, PFA, II, IF and Associations</p>
+            </div>
+            <div class="hero-check-item">
+              <div class="hero-check-icon">✓</div>
+              <p data-lang="ro">Modificări la Registrul Comerțului</p>
+              <p data-lang="en">Trade Registry modifications</p>
+            </div>
+            <div class="hero-check-item">
+              <div class="hero-check-icon">✓</div>
+              <p data-lang="ro">Obținere licențe, avize și autorizații</p>
+              <p data-lang="en">Obtaining licenses, permits and authorizations</p>
+            </div>
+            <div class="hero-check-item">
+              <div class="hero-check-icon">✓</div>
+              <p data-lang="ro">Redactare contracte comerciale & documente juridice</p>
+              <p data-lang="en">Drafting commercial contracts & legal documents</p>
+            </div>
+            <div class="hero-check-item">
+              <div class="hero-check-icon">✓</div>
+              <p data-lang="ro">Dizolvare și lichidare voluntară</p>
+              <p data-lang="en">Dissolution and voluntary liquidation</p>
+            </div>
+            <div class="hero-check-item">
+              <div class="hero-check-icon">✓</div>
+              <p data-lang="ro">Suport administrativ permanent</p>
+              <p data-lang="en">Ongoing administrative support</p>
+            </div>
+          </div>
+          <div class="hero-card-cta">
+            <p data-lang="ro">Fără costuri ascunse. Fără surprize.</p>
+            <p data-lang="en">No hidden costs. No surprises.</p>
+            <a href="#contact" class="btn btn-gold" style="padding:10px 20px; font-size:.82rem;" data-lang="ro">Începe acum</a>
+            <a href="#contact" class="btn btn-gold" style="padding:10px 20px; font-size:.82rem;" data-lang="en">Start now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Trust Bar ─────────────────────────────────────── -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <div class="trust-icon">⚖️</div>
+        <div>
+          <p data-lang="ro">Conformitate 100% legală</p>
+          <p data-lang="en">100% legal compliance</p>
+          <span data-lang="ro">Proceduri corecte garantate</span>
+          <span data-lang="en">Guaranteed correct procedures</span>
+        </div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-icon" style="background:var(--gold-lt);">⏱️</div>
+        <div>
+          <p data-lang="ro" style="color:var(--gold);">Răspundem în maxim 24h</p>
+          <p data-lang="en" style="color:var(--gold);">We respond within 24h</p>
+          <span data-lang="ro">Garantat în zile lucrătoare</span>
+          <span data-lang="en">Guaranteed on working days</span>
+        </div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-icon">🤝</div>
+        <div>
+          <p data-lang="ro">Fără costuri ascunse</p>
+          <p data-lang="en">No hidden costs</p>
+          <span data-lang="ro">Transparență totală în ofertare</span>
+          <span data-lang="en">Full transparency in pricing</span>
+        </div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-icon">📞</div>
+        <div>
+          <a href="tel:+40723395929" style="font-size:.85rem; font-weight:600; color:var(--ink);">+40 723 395 929</a>
+          <span><a href="mailto:sabinapopa79@gmail.com" style="font-size:.75rem; color:var(--ink-muted);">sabinapopa79@gmail.com</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── About ─────────────────────────────────────────── -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="grid-2">
+      <div class="about-image reveal">
+        <div class="about-img-wrap" style="background:none; padding:0; overflow:hidden;">
+          <svg viewBox="0 0 520 480" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+            <defs>
+              <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0e3529"/>
+                <stop offset="100%" stop-color="#1a6b50"/>
+              </linearGradient>
+              <linearGradient id="stoneGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#c8bfa8"/>
+                <stop offset="100%" stop-color="#9e9282"/>
+              </linearGradient>
+              <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#d4a843"/>
+                <stop offset="100%" stop-color="#8a6520"/>
+              </linearGradient>
+              <linearGradient id="parchGrad" x1="0" y1="0" x2="0.3" y2="1">
+                <stop offset="0%" stop-color="#fdf6e3"/>
+                <stop offset="100%" stop-color="#f0e3c0"/>
+              </linearGradient>
+              <linearGradient id="penGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#2a2a2a"/>
+                <stop offset="100%" stop-color="#111"/>
+              </linearGradient>
+              <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="rgba(0,0,0,0.35)"/>
+              </filter>
+              <filter id="softShadow" x="-10%" y="-10%" width="120%" height="130%">
+                <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="rgba(0,0,0,0.2)"/>
+              </filter>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <!-- Star/sparkle -->
+              <radialGradient id="moonGlow">
+                <stop offset="0%" stop-color="rgba(255,240,180,0.3)"/>
+                <stop offset="100%" stop-color="rgba(255,240,180,0)"/>
+              </radialGradient>
+            </defs>
+
+            <!-- ── Sky background ── -->
+            <rect width="520" height="480" fill="url(#skyGrad)"/>
+
+            <!-- Stars -->
+            <circle cx="40" cy="30" r="1.2" fill="rgba(255,255,220,0.7)"/>
+            <circle cx="95" cy="18" r="0.8" fill="rgba(255,255,220,0.5)"/>
+            <circle cx="160" cy="40" r="1" fill="rgba(255,255,220,0.6)"/>
+            <circle cx="250" cy="22" r="1.3" fill="rgba(255,255,220,0.8)"/>
+            <circle cx="340" cy="35" r="0.9" fill="rgba(255,255,220,0.5)"/>
+            <circle cx="420" cy="15" r="1.1" fill="rgba(255,255,220,0.7)"/>
+            <circle cx="480" cy="45" r="0.7" fill="rgba(255,255,220,0.4)"/>
+            <circle cx="70" cy="60" r="0.6" fill="rgba(255,255,220,0.4)"/>
+            <circle cx="300" cy="55" r="0.8" fill="rgba(255,255,220,0.5)"/>
+            <circle cx="460" cy="70" r="1" fill="rgba(255,255,220,0.6)"/>
+
+            <!-- Moon glow -->
+            <circle cx="450" cy="50" r="60" fill="url(#moonGlow)"/>
+            <circle cx="450" cy="50" r="22" fill="rgba(255,250,210,0.12)"/>
+            <circle cx="450" cy="50" r="16" fill="rgba(255,250,210,0.18)"/>
+
+            <!-- Ground line -->
+            <rect x="0" y="310" width="520" height="170" fill="#0a2a1e"/>
+
+            <!-- ── TRIBUNAL / COURTHOUSE ── -->
+            <!-- Main building body -->
+            <rect x="90" y="160" width="340" height="155" fill="url(#stoneGrad)" filter="url(#shadow)"/>
+            <!-- Darker stone texture rows -->
+            <rect x="90" y="180" width="340" height="3" fill="rgba(0,0,0,0.06)"/>
+            <rect x="90" y="210" width="340" height="2" fill="rgba(0,0,0,0.05)"/>
+            <rect x="90" y="240" width="340" height="2" fill="rgba(0,0,0,0.05)"/>
+            <rect x="90" y="270" width="340" height="2" fill="rgba(0,0,0,0.05)"/>
+
+            <!-- Pediment / triangular top -->
+            <polygon points="90,160 260,90 430,160" fill="#d4c9b0" filter="url(#shadow)"/>
+            <!-- Pediment inner triangle -->
+            <polygon points="110,160 260,100 410,160" fill="#c8bfa8"/>
+            <!-- Pediment detail line -->
+            <line x1="90" y1="160" x2="430" y2="160" stroke="#a09080" stroke-width="3"/>
+
+            <!-- Entablature (frieze bar) -->
+            <rect x="85" y="155" width="350" height="10" fill="#bdb0a0"/>
+            <rect x="85" y="155" width="350" height="3" fill="#cdc3b3"/>
+
+            <!-- COLUMNS (6 columns) -->
+            <g fill="#e0d8c8">
+              <rect x="110" y="165" width="22" height="150" rx="2" filter="url(#softShadow)"/>
+              <rect x="110" y="165" width="22" height="5" fill="#d0c8b8"/>
+              <!-- Column flutes suggestion -->
+              <rect x="114" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+              <rect x="119" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+              <rect x="124" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+
+              <rect x="170" y="165" width="22" height="150" rx="2" filter="url(#softShadow)"/>
+              <rect x="174" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+              <rect x="179" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+              <rect x="184" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+
+              <rect x="230" y="165" width="22" height="150" rx="2" filter="url(#softShadow)"/>
+              <rect x="234" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+              <rect x="239" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+              <rect x="244" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+
+              <rect x="288" y="165" width="22" height="150" rx="2" filter="url(#softShadow)"/>
+              <rect x="292" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+              <rect x="297" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+              <rect x="302" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+
+              <rect x="346" y="165" width="22" height="150" rx="2" filter="url(#softShadow)"/>
+              <rect x="350" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+              <rect x="355" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+              <rect x="360" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+
+              <rect x="398" y="165" width="22" height="150" rx="2" filter="url(#softShadow)"/>
+              <rect x="402" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+              <rect x="407" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+              <rect x="412" y="170" width="2" height="140" fill="rgba(0,0,0,0.07)"/>
+            </g>
+
+            <!-- Column bases & capitals -->
+            <g fill="#ccc3b2">
+              <rect x="107" y="310" width="28" height="8" rx="1"/>
+              <rect x="107" y="162" width="28" height="6" rx="1"/>
+              <rect x="167" y="310" width="28" height="8" rx="1"/>
+              <rect x="167" y="162" width="28" height="6" rx="1"/>
+              <rect x="227" y="310" width="28" height="8" rx="1"/>
+              <rect x="227" y="162" width="28" height="6" rx="1"/>
+              <rect x="285" y="310" width="28" height="8" rx="1"/>
+              <rect x="285" y="162" width="28" height="6" rx="1"/>
+              <rect x="343" y="310" width="28" height="8" rx="1"/>
+              <rect x="343" y="162" width="28" height="6" rx="1"/>
+              <rect x="395" y="310" width="28" height="8" rx="1"/>
+              <rect x="395" y="162" width="28" height="6" rx="1"/>
+            </g>
+
+            <!-- Steps -->
+            <rect x="75" y="312" width="370" height="8" fill="#bdb0a0" rx="1"/>
+            <rect x="62" y="319" width="396" height="8" fill="#b0a494" rx="1"/>
+            <rect x="50" y="326" width="420" height="8" fill="#a89e8e" rx="1"/>
+
+            <!-- Main door -->
+            <rect x="218" y="240" width="84" height="75" rx="4" fill="#1a1a1a"/>
+            <rect x="222" y="243" width="76" height="69" rx="3" fill="#151515"/>
+            <!-- Door arch -->
+            <path d="M218,258 Q260,225 302,258" fill="#1a1a1a"/>
+            <!-- Door panels -->
+            <rect x="226" y="255" width="34" height="28" rx="2" fill="#252525" stroke="#333" stroke-width="0.5"/>
+            <rect x="264" y="255" width="34" height="28" rx="2" fill="#252525" stroke="#333" stroke-width="0.5"/>
+            <!-- Door handles -->
+            <circle cx="257" cy="270" r="2.5" fill="#b8963e"/>
+            <circle cx="263" cy="270" r="2.5" fill="#b8963e"/>
+
+            <!-- Windows -->
+            <rect x="132" y="210" width="42" height="55" rx="3" fill="#0d2a20"/>
+            <line x1="153" y1="210" x2="153" y2="265" stroke="#1a3d2b" stroke-width="1"/>
+            <line x1="132" y1="237" x2="174" y2="237" stroke="#1a3d2b" stroke-width="1"/>
+
+            <rect x="346" y="210" width="42" height="55" rx="3" fill="#0d2a20"/>
+            <line x1="367" y1="210" x2="367" y2="265" stroke="#1a3d2b" stroke-width="1"/>
+            <line x1="346" y1="237" x2="388" y2="237" stroke="#1a3d2b" stroke-width="1"/>
+
+            <!-- Ground / foreground -->
+            <rect x="0" y="330" width="520" height="150" fill="#081e14"/>
+
+            <!-- ── FOREGROUND TABLE ── -->
+            <rect x="60" y="350" width="400" height="12" rx="4" fill="#2a1a08" filter="url(#shadow)"/>
+            <rect x="60" y="362" width="400" height="6" rx="2" fill="#1e1205"/>
+
+            <!-- ── CONTRACT / DOCUMENT ── -->
+            <g transform="rotate(-8, 260, 360)" filter="url(#shadow)">
+              <rect x="118" y="290" width="155" height="195" rx="4" fill="url(#parchGrad)"/>
+              <!-- Contract header red seal area -->
+              <rect x="118" y="290" width="155" height="22" rx="4" fill="#c8a870"/>
+              <rect x="118" y="306" width="155" height="6" fill="#c8a870"/>
+              <!-- Header text lines -->
+              <rect x="130" y="296" width="80" height="5" rx="2" fill="rgba(80,40,0,0.6)"/>
+              <rect x="130" y="303" width="55" height="3" rx="1.5" fill="rgba(80,40,0,0.4)"/>
+              <!-- Contract text lines -->
+              <rect x="128" y="322" width="135" height="3" rx="1.5" fill="rgba(30,20,10,0.2)"/>
+              <rect x="128" y="330" width="130" height="3" rx="1.5" fill="rgba(30,20,10,0.18)"/>
+              <rect x="128" y="338" width="138" height="3" rx="1.5" fill="rgba(30,20,10,0.2)"/>
+              <rect x="128" y="346" width="120" height="3" rx="1.5" fill="rgba(30,20,10,0.15)"/>
+              <rect x="128" y="354" width="135" height="3" rx="1.5" fill="rgba(30,20,10,0.2)"/>
+              <rect x="128" y="362" width="125" height="3" rx="1.5" fill="rgba(30,20,10,0.18)"/>
+              <rect x="128" y="370" width="132" height="3" rx="1.5" fill="rgba(30,20,10,0.2)"/>
+              <rect x="128" y="378" width="110" height="3" rx="1.5" fill="rgba(30,20,10,0.14)"/>
+              <!-- Divider -->
+              <line x1="128" y1="390" x2="263" y2="390" stroke="rgba(100,70,20,0.3)" stroke-width="1"/>
+              <!-- Signature lines -->
+              <rect x="128" y="400" width="55" height="2" rx="1" fill="rgba(30,20,10,0.3)"/>
+              <rect x="200" y="400" width="55" height="2" rx="1" fill="rgba(30,20,10,0.3)"/>
+              <!-- Signature labels -->
+              <rect x="128" y="406" width="40" height="2" rx="1" fill="rgba(30,20,10,0.15)"/>
+              <rect x="200" y="406" width="40" height="2" rx="1" fill="rgba(30,20,10,0.15)"/>
+              <!-- Wax seal -->
+              <circle cx="245" cy="460" r="16" fill="#8b1a1a" opacity="0.85"/>
+              <circle cx="245" cy="460" r="13" fill="#7a1515" opacity="0.6"/>
+              <circle cx="245" cy="460" r="9" fill="none" stroke="#c8a870" stroke-width="1" opacity="0.7"/>
+              <text x="245" y="464" text-anchor="middle" font-size="7" fill="#c8a870" font-family="serif" opacity="0.9">FB</text>
+            </g>
+
+            <!-- ── FOUNTAIN PEN ── -->
+            <g transform="rotate(35, 370, 370)" filter="url(#shadow)">
+              <!-- Pen body -->
+              <rect x="318" y="310" width="14" height="100" rx="7" fill="url(#penGrad)"/>
+              <!-- Pen cap ring -->
+              <rect x="316" y="350" width="18" height="6" rx="3" fill="#b8963e"/>
+              <rect x="316" y="354" width="18" height="2" fill="#d4a843"/>
+              <!-- Clip -->
+              <rect x="330" y="312" width="3" height="80" rx="1.5" fill="#333"/>
+              <!-- Nib -->
+              <polygon points="318,408 332,408 325,435" fill="#c0c0c0"/>
+              <polygon points="323,408 327,408 325,430" fill="#a0a0a0"/>
+              <!-- Nib split -->
+              <line x1="325" y1="410" x2="325" y2="435" stroke="#888" stroke-width="0.8"/>
+              <!-- Ink drop -->
+              <ellipse cx="325" cy="437" rx="2.5" ry="3.5" fill="#1a3d7a" opacity="0.7"/>
+              <!-- Pen top -->
+              <ellipse cx="325" cy="312" rx="7" ry="5" fill="#222"/>
+              <circle cx="325" cy="312" r="3" fill="#444"/>
+            </g>
+
+            <!-- ── BALANCE / SCALES OF JUSTICE ── -->
+            <g filter="url(#shadow)">
+              <!-- Base pillar -->
+              <rect x="248" y="370" width="12" height="70" rx="3" fill="url(#goldGrad)"/>
+              <rect x="240" y="430" width="28" height="8" rx="3" fill="url(#goldGrad)"/>
+              <rect x="234" y="437" width="40" height="6" rx="2" fill="#7a5a18"/>
+              <!-- Crossbar -->
+              <rect x="185" y="248" width="150" height="7" rx="3.5" fill="url(#goldGrad)"/>
+              <!-- Center pivot ornament -->
+              <circle cx="260" cy="252" r="8" fill="url(#goldGrad)"/>
+              <circle cx="260" cy="252" r="5" fill="#c89830"/>
+              <circle cx="260" cy="252" r="2" fill="#e8b840"/>
+              <!-- Vertical rod up -->
+              <rect x="257" y="180" width="6" height="75" rx="3" fill="url(#goldGrad)"/>
+              <!-- Top ornament -->
+              <polygon points="260,165 267,182 253,182" fill="url(#goldGrad)"/>
+              <circle cx="260" cy="162" r="6" fill="url(#goldGrad)"/>
+              <circle cx="260" cy="162" r="3.5" fill="#e8b840"/>
+
+              <!-- Left pan chains -->
+              <line x1="196" y1="255" x2="192" y2="285" stroke="#c8a830" stroke-width="1.5"/>
+              <line x1="200" y1="255" x2="205" y2="285" stroke="#c8a830" stroke-width="1.5"/>
+              <!-- Left pan -->
+              <path d="M182,285 Q196,300 210,285" fill="none" stroke="url(#goldGrad)" stroke-width="3"/>
+              <ellipse cx="196" cy="285" rx="18" ry="4" fill="#b8881e" opacity="0.7"/>
+              <!-- Left pan contents (law book) -->
+              <rect x="184" y="274" width="24" height="12" rx="2" fill="#8b1a1a"/>
+              <rect x="185" y="275" width="22" height="2" fill="#a02020"/>
+              <rect x="185" y="278" width="22" height="1" fill="rgba(255,200,150,0.4)"/>
+              <rect x="185" y="280" width="22" height="1" fill="rgba(255,200,150,0.4)"/>
+              <rect x="185" y="282" width="22" height="1" fill="rgba(255,200,150,0.4)"/>
+
+              <!-- Right pan chains (slightly lower – scales unbalanced slightly) -->
+              <line x1="314" y1="255" x2="310" y2="292" stroke="#c8a830" stroke-width="1.5"/>
+              <line x1="318" y1="255" x2="324" y2="292" stroke="#c8a830" stroke-width="1.5"/>
+              <!-- Right pan -->
+              <path d="M300,292 Q316,310 332,292" fill="none" stroke="url(#goldGrad)" stroke-width="3"/>
+              <ellipse cx="316" cy="292" rx="18" ry="4" fill="#b8881e" opacity="0.7"/>
+              <!-- Right pan contents (document roll) -->
+              <rect x="306" y="280" width="20" height="14" rx="3" fill="#f5e8c8"/>
+              <rect x="308" y="282" width="16" height="2" fill="rgba(100,70,10,0.3)"/>
+              <rect x="308" y="285" width="16" height="1.5" fill="rgba(100,70,10,0.2)"/>
+              <rect x="308" y="287.5" width="16" height="1.5" fill="rgba(100,70,10,0.2)"/>
+              <rect x="308" y="290" width="12" height="1.5" fill="rgba(100,70,10,0.2)"/>
+            </g>
+
+            <!-- ── GOLD LIGHT / GLOW from balance ── -->
+            <ellipse cx="260" cy="252" rx="50" ry="30" fill="rgba(184,150,62,0.07)"/>
+
+            <!-- ── OVERLAY: subtle dark gradient at bottom ── -->
+            <rect x="0" y="390" width="520" height="90" fill="url(#skyGrad)" opacity="0.6"/>
+
+            <!-- ── LOGO BADGE (bottom left) ── -->
+            <rect x="18" y="415" width="120" height="48" rx="6" fill="rgba(0,0,0,0.55)"/>
+            <text x="28" y="433" font-family="Georgia, serif" font-size="10" fill="#b8963e" font-weight="bold">FRESH BEGINNING</text>
+            <text x="28" y="447" font-family="Georgia, serif" font-size="8" fill="rgba(255,255,255,0.65)">SRL · CAEN 7020</text>
+            <line x1="28" y1="438" x2="128" y2="438" stroke="#b8963e" stroke-width="0.5" opacity="0.5"/>
+          </svg>
+
+          <div class="about-badge">
+            <div class="about-badge-num">CAEN<br>7020</div>
+            <p data-lang="ro">Consultanță în management</p>
+            <p data-lang="en">Management consulting</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-text reveal reveal-delay-2">
+        <span class="label" data-lang="ro">Despre Fresh Beginning SRL</span>
+        <span class="label" data-lang="en">About Fresh Beginning SRL</span>
+        <span class="gold-line" style="margin-top:12px;"></span>
+        <h2 data-lang="ro">Un <em style="font-style:italic;">nou început</em> pentru afacerea ta, construit pe fundații solide</h2>
+        <h2 data-lang="en">A <em style="font-style:italic;">fresh beginning</em> for your business, built on solid foundations</h2>
+        <div style="margin-top:24px;">
+          <p data-lang="ro">La Fresh Beginning SRL, înțelegem că înființarea sau administrarea unei afaceri poate fi copleșitoare — mai ales când nu știi de unde să începi sau ce formalități sunt necesare.</p>
+          <p data-lang="en">At Fresh Beginning SRL, we understand that starting or managing a business can be overwhelming — especially when you don't know where to begin or what formalities are required.</p>
+          <p data-lang="ro" style="margin-top:16px;">De aceea, suntem alături de antreprenorii români și internaționali în fiecare etapă a ciclului de viață al afacerii lor — de la prima idee, până la administrarea curentă sau, dacă este necesar, lichidarea voluntară.</p>
+          <p data-lang="en" style="margin-top:16px;">That's why we stand alongside Romanian and international entrepreneurs at every stage of their business lifecycle — from the first idea, through ongoing management, or if necessary, voluntary liquidation.</p>
+          <p data-lang="ro" style="margin-top:16px;">Nu suntem un simplu prestator de servicii. Suntem partenerul tău strategic, angajat să-ți ofere claritate, corectitudine și liniște juridică, astfel încât tu să te poți concentra pe ceea ce contează cu adevărat — creșterea afacerii tale.</p>
+          <p data-lang="en" style="margin-top:16px;">We are not just a service provider. We are your strategic partner, committed to offering you clarity, accuracy, and legal peace of mind, so you can focus on what truly matters — growing your business.</p>
+        </div>
+        <div class="about-pills">
+          <span class="pill" data-lang="ro">SRL · SA</span>
+          <span class="pill" data-lang="en">SRL · SA</span>
+          <span class="pill" data-lang="ro">PFA</span>
+          <span class="pill" data-lang="en">PFA</span>
+          <span class="pill" data-lang="ro">II · IF</span>
+          <span class="pill" data-lang="en">II · IF</span>
+          <span class="pill" data-lang="ro">Asociații & Fundații</span>
+          <span class="pill" data-lang="en">Associations & Foundations</span>
+          <span class="pill" data-lang="ro">Contracte Comerciale</span>
+          <span class="pill" data-lang="en">Commercial Contracts</span>
+          <span class="pill" data-lang="ro">Autorizații & Avize</span>
+          <span class="pill" data-lang="en">Permits & Licenses</span>
+        </div>
+        <div style="margin-top:36px; display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="#contact" class="btn btn-primary" data-lang="ro">Contactează-ne</a>
+          <a href="#contact" class="btn btn-primary" data-lang="en">Contact us</a>
+          <a href="#services" class="btn btn-outline" data-lang="ro">Vezi serviciile noastre</a>
+          <a href="#services" class="btn btn-outline" data-lang="en">View our services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Why Choose Us ─────────────────────────────────── -->
+<section class="section section--alt" id="why">
+  <div class="container">
+    <div style="max-width:580px; margin-bottom:56px;" class="reveal">
+      <span class="label" data-lang="ro">De ce să ne alegi</span>
+      <span class="label" data-lang="en">Why choose us</span>
+      <span class="gold-line" style="margin-top:12px;"></span>
+      <h2 data-lang="ro">Expertiza care face diferența. Liniștea pe care o meriți.</h2>
+      <h2 data-lang="en">The expertise that makes the difference. The peace of mind you deserve.</h2>
+      <p style="margin-top:12px;" data-lang="ro">Nu suntem un simplu prestator de servicii administrative. Suntem partenerul strategic care se asigură că afacerea ta funcționează corect, legal și fără riscuri.</p>
+      <p style="margin-top:12px;" data-lang="en">We are not a simple administrative services provider. We are the strategic partner who ensures your business operates correctly, legally, and without risks.</p>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <h3 data-lang="ro">Expertiză juridică reală, nu promisiuni</h3>
+        <h3 data-lang="en">Real legal expertise, not promises</h3>
+        <p data-lang="ro">Cunoaștem în profunzime legislația română și procedurile ORC, ANAF, Primărie. Fiecare dosar este realizat corect din prima — fără reveniri, fără erori costisitoare.</p>
+        <p data-lang="en">We know Romanian legislation and ORC, ANAF, City Hall procedures in depth. Every file is done correctly from the start — no revisions, no costly errors.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <h3 data-lang="ro">Răspundem în maxim 24h — garantat</h3>
+        <h3 data-lang="en">We respond within 24h — guaranteed</h3>
+        <p data-lang="ro">Fiecare solicitare primește un răspuns concret în cel mult 24 de ore în zile lucrătoare. Promptitudinea nu este un slogan la noi — este un angajament asumat.</p>
+        <p data-lang="en">Every request receives a concrete response within 24 hours on working days. Promptness is not a slogan for us — it is an assumed commitment.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <h3 data-lang="ro">Soluții personalizate, nu șabloane</h3>
+        <h3 data-lang="en">Personalized solutions, not templates</h3>
+        <p data-lang="ro">Fiecare afacere este unică. Analizăm situația ta specifică și îți construim o soluție exactă — fără servicii inutile, fără costuri care nu își justifică valoarea.</p>
+        <p data-lang="en">Every business is unique. We analyse your specific situation and build you an exact solution — no unnecessary services, no unjustifiable costs.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <h3 data-lang="ro">Transparență totală — zero costuri ascunse</h3>
+        <h3 data-lang="en">Full transparency — zero hidden costs</h3>
+        <p data-lang="ro">Primești o ofertă completă înainte să decidem să lucrăm împreună. Știi exact ce plătești, de ce și când. Nu există surprize neplăcute la final.</p>
+        <p data-lang="en">You receive a complete offer before we decide to work together. You know exactly what you pay, why, and when. There are no unpleasant surprises at the end.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">05</div>
+        <h3 data-lang="ro">Conformitate legală garantată</h3>
+        <h3 data-lang="en">Guaranteed legal compliance</h3>
+        <p data-lang="ro">Fiecare document, procedură și dosar respectă 100% legislația în vigoare. Elimini riscul de sancțiuni, invalidări sau probleme juridice viitoare.</p>
+        <p data-lang="en">Every document, procedure, and file complies 100% with current legislation. You eliminate the risk of penalties, invalidations, or future legal problems.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">06</div>
+        <h3 data-lang="ro">Un partener pe termen lung, nu o singură tranzacție</h3>
+        <h3 data-lang="en">A long-term partner, not a single transaction</h3>
+        <p data-lang="ro">Rămânem alături de tine după finalizarea serviciului. Suntem disponibili pentru orice întrebare sau nevoie nouă, pe măsură ce afacerea ta crește.</p>
+        <p data-lang="en">We stay by your side after the service is completed. We are available for any question or new need as your business grows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Services ──────────────────────────────────────── -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="services-intro reveal">
+      <span class="label" data-lang="ro">Serviciile noastre</span>
+      <span class="label" data-lang="en">Our services</span>
+      <span class="gold-line" style="margin-top:12px;"></span>
+      <h2 data-lang="ro">Sprijin juridic și administrativ complet — de la start până la succes</h2>
+      <h2 data-lang="en">Complete legal and administrative support — from start to success</h2>
+      <p data-lang="ro">Ne ocupăm de tot ce este birocratic, juridic și administrativ, astfel încât tu să te poți concentra exclusiv pe creșterea afacerii tale. Corect, complet, fără riscuri.</p>
+      <p data-lang="en">We take care of everything bureaucratic, legal, and administrative, so you can focus exclusively on growing your business. Correctly, completely, without risk.</p>
+    </div>
+
+    <div class="svc-grid reveal">
+
+      <!-- ── Category 1: Business Setup Services ── -->
+      <div class="svc-card">
+        <div class="svc-cat-badge" data-lang="ro">01 · Înregistrare & Constituire</div>
+        <div class="svc-cat-badge" data-lang="en">01 · Business Setup</div>
+        <div class="svc-icon">🏢</div>
+        <h3 data-lang="ro">Business Setup Services</h3>
+        <h3 data-lang="en">Business Setup Services</h3>
+        <p data-lang="ro">Pornim afacerea ta pe fundații juridice solide. Gestionăm complet înregistrarea, de la rezervarea denumirii până la ridicarea actelor finale — fără deplasări, fără bătăi de cap.</p>
+        <p data-lang="en">We start your business on solid legal foundations. We fully manage registration, from name reservation to collecting the final documents — no travel, no hassle.</p>
+        <div class="svc-list">
+          <div class="svc-item" data-lang="ro">Înființare SRL — rezervare denumire, act constitutiv, dosar ORC complet, ștampilă, RUC</div>
+          <div class="svc-item" data-lang="en">SRL formation — name reservation, constitutive act, complete ORC file, stamp, RUC</div>
+          <div class="svc-item" data-lang="ro">Înregistrare PFA, Întreprindere Individuală (II) și Familială (IF)</div>
+          <div class="svc-item" data-lang="en">Registration of PFA, Individual Enterprise (II) and Family Enterprise (IF)</div>
+          <div class="svc-item" data-lang="ro">Deschidere punct de lucru — hotărâre AGA, înregistrare ORC, RUC</div>
+          <div class="svc-item" data-lang="en">Opening a secondary office — GMS decision, ORC registration, RUC</div>
+          <div class="svc-item" data-lang="ro">Modificări statutare — sediu, administrator, asociați, capital, obiect de activitate</div>
+          <div class="svc-item" data-lang="en">Statutory modifications — office, administrator, associates, capital, business activity</div>
+          <div class="svc-item" data-lang="ro">Recodificare CAEN Rev.3, convocare Adunare Generală, suspendare activitate</div>
+          <div class="svc-item" data-lang="en">CAEN Rev.3 recoding, General Assembly convening, activity suspension</div>
+          <div class="svc-item" data-lang="ro">Certificate ORC — certificat constatator, beneficiari reali, declarații ONRC</div>
+          <div class="svc-item" data-lang="en">ORC certificates — certificate constatator, beneficial owners, ONRC declarations</div>
+        </div>
+        <a href="#contact" class="btn btn-outline" data-lang="ro">Solicită o consultație →</a>
+        <a href="#contact" class="btn btn-outline" data-lang="en">Request a consultation →</a>
+      </div>
+
+      <!-- ── Category 2: Legal & Administrative Support ── -->
+      <div class="svc-card">
+        <div class="svc-cat-badge" data-lang="ro">02 · Suport Juridic & Administrativ</div>
+        <div class="svc-cat-badge" data-lang="en">02 · Legal & Administrative Support</div>
+        <div class="svc-icon">⚙️</div>
+        <h3 data-lang="ro">Legal & Administrative Support</h3>
+        <h3 data-lang="en">Legal & Administrative Support</h3>
+        <p data-lang="ro">Menții firma în legalitate deplină, fără să pierzi timp cu birocrația. Gestionăm procedurile administrative esențiale în locul tău, de la ANAF la utilități.</p>
+        <p data-lang="en">Keep your company in full compliance without losing time to bureaucracy. We manage essential administrative procedures on your behalf, from ANAF to utilities.</p>
+        <div class="svc-list">
+          <div class="svc-item" data-lang="ro">Dizolvare voluntară și radiere — hotărâre AGA, publicare Monitorul Oficial, radiere ORC (2 faze)</div>
+          <div class="svc-item" data-lang="en">Voluntary dissolution & deregistration — GMS decision, Official Gazette publication, ORC deregistration (2 phases)</div>
+          <div class="svc-item" data-lang="ro">Fiscalizare casă de marcat — documentație RelSysPro, înregistrare la ANAF</div>
+          <div class="svc-item" data-lang="en">Cash register fiscalization — RelSysPro documentation, registration at ANAF</div>
+          <div class="svc-item" data-lang="ro">Declarare taxă publicitate și afișaj — întocmire dosar, depunere declarație, achitare taxe</div>
+          <div class="svc-item" data-lang="en">Advertising & signage tax declaration — file preparation, submission, tax payment</div>
+          <div class="svc-item" data-lang="ro">Contracte furnizori utilități (Polaris / Congaz / Enel) — dosare, taxe, încheiere contracte</div>
+          <div class="svc-item" data-lang="en">Utility supplier contracts (Polaris / Congaz / Enel) — files, fees, contract signing</div>
+        </div>
+        <a href="#contact" class="btn btn-outline" data-lang="ro">Solicită o consultație →</a>
+        <a href="#contact" class="btn btn-outline" data-lang="en">Request a consultation →</a>
+      </div>
+
+      <!-- ── Category 3: Permits, Licenses & Authorizations ── FEATURED ── -->
+      <div class="svc-card svc-featured">
+        <div class="svc-cat-badge" data-lang="ro">03 · Autorizații & Licențe</div>
+        <div class="svc-cat-badge" data-lang="en">03 · Permits & Licenses</div>
+        <div class="svc-icon">🛡️</div>
+        <h3 data-lang="ro">Permits, Licenses & Authorizations</h3>
+        <h3 data-lang="en">Permits, Licenses & Authorizations</h3>
+        <p data-lang="ro">Lipsa autorizațiilor corecte poate duce la amenzi severe sau suspendarea activității. Identificăm exact ce îți trebuie și obținem totul pentru tine — dosar complet, depunere, urmărire, ridicare.</p>
+        <p data-lang="en">Missing the right permits can lead to heavy fines or activity suspension. We identify exactly what you need and obtain everything — complete file, submission, tracking, collection.</p>
+        <div class="svc-list">
+          <div class="svc-item" data-lang="ro">Consultanță privind cerințele de autorizare în funcție de domeniul tău de activitate</div>
+          <div class="svc-item" data-lang="en">Consulting on authorization requirements specific to your business sector</div>
+          <div class="svc-item" data-lang="ro">Program funcționare & Autorizație funcționare — Primăria Constanța</div>
+          <div class="svc-item" data-lang="en">Operating schedule & Operating license — Constanța City Hall</div>
+          <div class="svc-item" data-lang="ro">Autorizație funcționare alimentație publică — Primăria Constanța</div>
+          <div class="svc-item" data-lang="en">Public food service operating permit — Constanța City Hall</div>
+          <div class="svc-item" data-lang="ro">Licențe A.P.C. (Autoritatea pentru Protecția Consumatorilor)</div>
+          <div class="svc-item" data-lang="en">A.P.C. Licenses (Consumer Protection Authority)</div>
+          <div class="svc-item" data-lang="ro">Autorizație sanitar-veterinară & mediu — întocmire dosar, asistență inspectori, ridicare autorizație</div>
+          <div class="svc-item" data-lang="en">Sanitary-veterinary & environmental permit — file preparation, inspector support, permit collection</div>
+        </div>
+        <a href="#contact" class="btn btn-outline" data-lang="ro">Solicită o consultație →</a>
+        <a href="#contact" class="btn btn-outline" data-lang="en">Request a consultation →</a>
+      </div>
+
+      <!-- ── Category 4: Contracts & Legal Documentation ── -->
+      <div class="svc-card">
+        <div class="svc-cat-badge" data-lang="ro">04 · Contracte & Documente Juridice</div>
+        <div class="svc-cat-badge" data-lang="en">04 · Contracts & Legal Documentation</div>
+        <div class="svc-icon">📄</div>
+        <h3 data-lang="ro">Contracts & Legal Documentation</h3>
+        <h3 data-lang="en">Contracts & Legal Documentation</h3>
+        <p data-lang="ro">Un contract bine redactat este cel mai bun scut juridic al afacerii tale. Redactăm, analizăm și optimizăm orice document comercial sau juridic — adaptat exact situației tale.</p>
+        <p data-lang="en">A well-drafted contract is your business's best legal shield. We draft, analyse, and optimize any commercial or legal document — tailored exactly to your situation.</p>
+        <div class="svc-list">
+          <div class="svc-item" data-lang="ro">Redactare contracte comerciale sub semnătură privată — prestări servicii, vânzare-cumpărare, colaborare, parteneriat, locațiune și altele</div>
+          <div class="svc-item" data-lang="en">Drafting commercial contracts under private signature — services, sale-purchase, collaboration, partnership, lease and others</div>
+          <div class="svc-item" data-lang="ro">Redactare acte constitutive, hotărâri AGA, decizii asociat unic, acte adiționale</div>
+          <div class="svc-item" data-lang="en">Drafting constitutive acts, GMS decisions, sole associate decisions, addenda</div>
+          <div class="svc-item" data-lang="ro">Redactare documente juridice și administrative — cereri, notificări, somații, memorii, procuri</div>
+          <div class="svc-item" data-lang="en">Drafting legal and administrative documents — applications, notifications, notices, memoranda, powers of attorney</div>
+          <div class="svc-item" data-lang="ro">Analiză contracte primite — identificare clauze dezavantajoase înainte de semnare</div>
+          <div class="svc-item" data-lang="en">Contract review — identifying disadvantageous clauses before signing</div>
+        </div>
+        <a href="#contact" class="btn btn-outline" data-lang="ro">Solicită o consultație →</a>
+        <a href="#contact" class="btn btn-outline" data-lang="en">Request a consultation →</a>
+      </div>
+
+      <!-- ── Category 5: Business Consulting & Negotiation Support ── -->
+      <div class="svc-card">
+        <div class="svc-cat-badge" data-lang="ro">05 · Consultanță & Negociere</div>
+        <div class="svc-cat-badge" data-lang="en">05 · Consulting & Negotiation</div>
+        <div class="svc-icon">🤝</div>
+        <h3 data-lang="ro">Business Consulting & Negotiation Support</h3>
+        <h3 data-lang="en">Business Consulting & Negotiation Support</h3>
+        <p data-lang="ro">Suntem alături de tine la masa negocierilor și în orice decizie strategică. Cu argumente clare, documentație solidă și experiență practică — pentru a-ți proteja interesele pe termen lung.</p>
+        <p data-lang="en">We stand beside you at the negotiating table and in every strategic decision. With clear arguments, solid documentation, and practical experience — to protect your long-term interests.</p>
+        <div class="svc-list">
+          <div class="svc-item" data-lang="ro">Consultanță privind forma juridică optimă pentru afacerea ta (SRL, PFA, II, IF, SA)</div>
+          <div class="svc-item" data-lang="en">Consulting on the optimal legal form for your business (SRL, PFA, II, IF, SA)</div>
+          <div class="svc-item" data-lang="ro">Asistență și reprezentare în negocierea termenilor contractuali cu parteneri sau clienți</div>
+          <div class="svc-item" data-lang="en">Assistance and representation in negotiating contractual terms with partners or clients</div>
+          <div class="svc-item" data-lang="ro">Consultanță privind conformitatea legală și obligațiile administrative curente</div>
+          <div class="svc-item" data-lang="en">Consulting on legal compliance and current administrative obligations</div>
+          <div class="svc-item" data-lang="ro">Orice alt serviciu de consultanță, asistență și reprezentare — onorariu negociat direct</div>
+          <div class="svc-item" data-lang="en">Any other consulting, assistance, and representation service — fee negotiated directly</div>
+        </div>
+        <a href="#contact" class="btn btn-outline" data-lang="ro">Solicită o consultație →</a>
+        <a href="#contact" class="btn btn-outline" data-lang="en">Request a consultation →</a>
+      </div>
+
+    </div><!-- /svc-grid -->
+
+    <!-- Mid-page inline CTA -->
+    <div class="inline-cta reveal">
+      <div class="inline-cta-text">
+        <div class="inline-cta-badge">⏱ Răspundem în maxim 24h</div>
+        <h3 data-lang="ro">Nu ești sigur de ce serviciu ai nevoie? Spune-ne situația ta.</h3>
+        <h3 data-lang="en">Not sure which service you need? Tell us your situation.</h3>
+        <p data-lang="ro">Îți oferim o analiză gratuită și îți explicăm exact ce pași urmează — fără obligații, fără jargon juridic.</p>
+        <p data-lang="en">We offer a free analysis and explain exactly what steps to follow — no obligations, no legal jargon.</p>
+      </div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="#contact" class="btn btn-primary" data-lang="ro">Contactează-ne acum →</a>
+        <a href="#contact" class="btn btn-primary" data-lang="en">Contact us now →</a>
+        <a href="tel:+40723395929" class="btn btn-outline" data-lang="ro">📞 +40 723 395 929</a>
+        <a href="tel:+40723395929" class="btn btn-outline" data-lang="en">📞 +40 723 395 929</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ─── Process ───────────────────────────────────────── -->
+<section class="section section--alt" id="process">
+  <div class="container">
+    <div style="text-align:center; max-width:560px; margin:0 auto 64px;" class="reveal">
+      <span class="label" data-lang="ro">Cum lucrăm</span>
+      <span class="label" data-lang="en">How we work</span>
+      <span class="gold-line" style="margin:12px auto 0;"></span>
+      <h2 data-lang="ro">Simplu, clar și fără surprize neplăcute</h2>
+      <h2 data-lang="en">Simple, clear and without unpleasant surprises</h2>
+      <p style="margin-top:12px;" data-lang="ro">Știm că birocrația poate fi copleșitoare. De aceea am simplificat la maximum procesul de lucru — tu ai nevoie de cât mai puțin din timpul tău.</p>
+      <p style="margin-top:12px;" data-lang="en">We know bureaucracy can be overwhelming. That's why we've simplified our process to the maximum — you need as little of your time as possible.</p>
+    </div>
+    <div class="process-steps reveal">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <h4 data-lang="ro">Consultație gratuită</h4>
+        <h4 data-lang="en">Free consultation</h4>
+        <p data-lang="ro">Îți analizăm situația și îți explicăm toate opțiunile disponibile. Fără obligații, fără costuri ascunse.</p>
+        <p data-lang="en">We analyse your situation and explain all available options. No obligations, no hidden costs.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <h4 data-lang="ro">Ofertă clară & personalizată</h4>
+        <h4 data-lang="en">Clear & personalized offer</h4>
+        <p data-lang="ro">Primești o ofertă concretă, cu toate costurile incluse. Știi exact ce plătești și ce primești.</p>
+        <p data-lang="en">You receive a concrete offer with all costs included. You know exactly what you pay and what you get.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <h4 data-lang="ro">Ne ocupăm de tot</h4>
+        <h4 data-lang="en">We handle everything</h4>
+        <p data-lang="ro">Gestionăm toate documentele, procedurile și deplasările. Tu nu trebuie să faci nimic în plus.</p>
+        <p data-lang="en">We manage all documents, procedures, and errands. You don't need to do anything extra.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <h4 data-lang="ro">Livrare & suport continuu</h4>
+        <h4 data-lang="en">Delivery & ongoing support</h4>
+        <p data-lang="ro">Primești actele finalizate și rămânem alături de tine pentru orice urmări sau noi nevoi apărute.</p>
+        <p data-lang="en">You receive the finalized documents and we stay by your side for any follow-up or new needs that arise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Our Approach ───────────────────────────────────── -->
+<section class="section" id="approach">
+  <div class="container">
+    <div style="max-width:640px; margin-bottom:0;" class="reveal">
+      <span class="label" data-lang="ro">Angajamentul nostru</span>
+      <span class="label" data-lang="en">Our commitment</span>
+      <span class="gold-line" style="margin-top:12px;"></span>
+      <h2 data-lang="ro">De ce clienții noștri ne aleg și rămân alături de noi</h2>
+      <h2 data-lang="en">Why our clients choose us and stay with us</h2>
+    </div>
+    <div class="approach-grid reveal">
+      <div class="approach-item">
+        <div class="approach-icon-wrap">⚖️</div>
+        <div>
+          <h4 data-lang="ro">Conformitate juridică garantată</h4>
+          <h4 data-lang="en">Guaranteed legal compliance</h4>
+          <p data-lang="ro">Fiecare document, fiecare procedură, fiecare dosar este realizat strict conform legislației în vigoare. Nu faci compromisuri cu legalitatea când lucrezi cu noi.</p>
+          <p data-lang="en">Every document, every procedure, every file is carried out strictly in accordance with current legislation. You make no compromises on legality when working with us.</p>
+        </div>
+      </div>
+      <div class="approach-item">
+        <div class="approach-icon-wrap">🎯</div>
+        <div>
+          <h4 data-lang="ro">Soluții construite pe situația ta reală</h4>
+          <h4 data-lang="en">Solutions built on your real situation</h4>
+          <p data-lang="ro">Nu oferim răspunsuri generice. Analizăm contextul tău specific și îți oferim exact ce ai nevoie — nimic în plus, nimic în minus, și fără costuri nejustificate.</p>
+          <p data-lang="en">We don't give generic answers. We analyse your specific context and offer exactly what you need — nothing more, nothing less, and no unjustified costs.</p>
+        </div>
+      </div>
+      <div class="approach-item">
+        <div class="approach-icon-wrap">💬</div>
+        <div>
+          <h4 data-lang="ro">Comunicare clară, în limbaj accesibil</h4>
+          <h4 data-lang="en">Clear communication in accessible language</h4>
+          <p data-lang="ro">Transformăm legislația complicată în pași simpli și clari. Știi mereu unde ești, ce urmează și de ce. Fără surprize, fără confuzie.</p>
+          <p data-lang="en">We turn complicated legislation into simple, clear steps. You always know where you stand, what comes next, and why. No surprises, no confusion.</p>
+        </div>
+      </div>
+      <div class="approach-item">
+        <div class="approach-icon-wrap">🛡️</div>
+        <div>
+          <h4 data-lang="ro">Protecția intereselor tale pe termen lung</h4>
+          <h4 data-lang="en">Protection of your long-term interests</h4>
+          <p data-lang="ro">Nu ne gândim doar la sarcina curentă. Ne asigurăm că fiecare decizie juridică pe care o iei astăzi nu creează probleme mâine. Asta înseamnă un partener adevărat.</p>
+          <p data-lang="en">We don't think only about the current task. We ensure that every legal decision you make today doesn't create problems tomorrow. That's what a true partner means.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:56px;" class="reveal">
+      <a href="#contact" class="btn btn-primary" style="padding:16px 40px; font-size:1rem;" data-lang="ro">Solicită o consultație gratuită →</a>
+      <a href="#contact" class="btn btn-primary" style="padding:16px 40px; font-size:1rem;" data-lang="en">Request a free consultation →</a>
+      <p style="margin-top:16px; font-size:.82rem;" data-lang="ro">Răspundem în maxim 24h · Fără obligații · Fără costuri ascunse</p>
+      <p style="margin-top:16px; font-size:.82rem;" data-lang="en">We respond within 24h · No obligations · No hidden costs</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Testimonials ──────────────────────────────────── -->
+<section class="section section--alt" id="testimonials">
+  <div class="container">
+    <div style="text-align:center; max-width:560px; margin:0 auto 56px;" class="reveal">
+      <span class="label" data-lang="ro">Ce spun clienții noștri</span>
+      <span class="label" data-lang="en">What our clients say</span>
+      <span class="gold-line" style="margin:12px auto 0;"></span>
+      <h2 data-lang="ro">Rezultate reale. Clienți mulțumiți.</h2>
+      <h2 data-lang="en">Real results. Satisfied clients.</h2>
+      <p style="margin-top:12px;" data-lang="ro">Fiecare dosar rezolvat este o afacere care a putut porni corect. Iată ce spun antreprenorii care ne-au ales.</p>
+      <p style="margin-top:12px;" data-lang="en">Every resolved file is a business that was able to start correctly. Here is what the entrepreneurs who chose us say.</p>
+    </div>
+    <div class="testimonials-grid reveal">
+      <div class="testimonial-card">
+        <span class="testimonial-quote">"</span>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text" data-lang="ro">Am înregistrat SRL-ul în timp record și fără nicio eroare. Tot ce am trebuit să fac a fost să semnez — echipa Fresh Beginning s-a ocupat de absolut tot. Recomand cu toată încrederea.</p>
+        <p class="testimonial-text" data-lang="en">I registered my SRL in record time and with no errors. All I had to do was sign — the Fresh Beginning team took care of absolutely everything. I recommend them wholeheartedly.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AM</div>
+          <div>
+            <div class="testimonial-name">Alexandru M.</div>
+            <div class="testimonial-role" data-lang="ro">Fondator SRL · IT & Software</div>
+            <div class="testimonial-role" data-lang="en">SRL Founder · IT & Software</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <span class="testimonial-quote">"</span>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text" data-lang="ro">Aveam un contract de parteneriat pe care nu îl înțelegeam. Au identificat 3 clauze dezavantajoase pe care le-am renegociat. Mi-au economisit bani și timp înainte să semnez ceva care m-ar fi costat scump.</p>
+        <p class="testimonial-text" data-lang="en">I had a partnership contract I didn't fully understand. They identified 3 disadvantageous clauses that we renegotiated. They saved me money and time before I signed something that would have cost me dearly.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">IC</div>
+          <div>
+            <div class="testimonial-name">Ioana C.</div>
+            <div class="testimonial-role" data-lang="ro">Antreprenor · Consultanță HR</div>
+            <div class="testimonial-role" data-lang="en">Entrepreneur · HR Consulting</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <span class="testimonial-quote">"</span>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text" data-lang="ro">Ca cetățean străin, mă temeam că procesul de înregistrare a firmei în România va fi un coșmar birocratic. Fresh Beginning m-a ghidat pas cu pas, în engleză, și totul a decurs fără probleme. Profesionalism exemplar.</p>
+        <p class="testimonial-text" data-lang="en">As a foreign national, I feared the company registration process in Romania would be a bureaucratic nightmare. Fresh Beginning guided me step by step, in English, and everything went smoothly. Exemplary professionalism.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MK</div>
+          <div>
+            <div class="testimonial-name">Markus K.</div>
+            <div class="testimonial-role" data-lang="ro">Fondator SRL · Import-Export</div>
+            <div class="testimonial-role" data-lang="en">SRL Founder · Import-Export</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust bar under testimonials -->
+    <div style="display:flex; justify-content:center; gap:48px; flex-wrap:wrap; margin-top:56px; padding-top:48px; border-top:1px solid var(--border);" class="reveal">
+      <div style="text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:2.4rem; font-weight:500; color:var(--emerald); line-height:1;">100%</div>
+        <div style="font-size:.82rem; color:var(--ink-muted); margin-top:4px;" data-lang="ro">Conformitate legală garantată</div>
+        <div style="font-size:.82rem; color:var(--ink-muted); margin-top:4px;" data-lang="en">Guaranteed legal compliance</div>
+      </div>
+      <div style="width:1px; background:var(--border);"></div>
+      <div style="text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:2.4rem; font-weight:500; color:var(--emerald); line-height:1;">24h</div>
+        <div style="font-size:.82rem; color:var(--ink-muted); margin-top:4px;" data-lang="ro">Timp maxim de răspuns</div>
+        <div style="font-size:.82rem; color:var(--ink-muted); margin-top:4px;" data-lang="en">Maximum response time</div>
+      </div>
+      <div style="width:1px; background:var(--border);"></div>
+      <div style="text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:2.4rem; font-weight:500; color:var(--emerald); line-height:1;">0</div>
+        <div style="font-size:.82rem; color:var(--ink-muted); margin-top:4px;" data-lang="ro">Costuri ascunse</div>
+        <div style="font-size:.82rem; color:var(--ink-muted); margin-top:4px;" data-lang="en">Hidden costs</div>
+      </div>
+      <div style="width:1px; background:var(--border);"></div>
+      <div style="text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:2.4rem; font-weight:500; color:var(--emerald); line-height:1;">5★</div>
+        <div style="font-size:.82rem; color:var(--ink-muted); margin-top:4px;" data-lang="ro">Satisfacție clienți</div>
+        <div style="font-size:.82rem; color:var(--ink-muted); margin-top:4px;" data-lang="en">Client satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA Banner ────────────────────────────────────── -->
+<div class="cta-banner">
+  <div class="container">
+    <div class="cta-inner">
+      <h2 data-lang="ro">Birocrația nu trebuie să fie <em>povara ta</em>.</h2>
+      <h2 data-lang="en">Bureaucracy doesn't have to be <em>your burden</em>.</h2>
+      <p data-lang="ro">Mii de antreprenori pierd timp și bani din cauza dosarelor incomplete, autorizațiilor lipsă sau contractelor greșite. Tu nu trebuie să fii printre ei. Contactează-ne astăzi — prima consultație este gratuită și fără obligații.</p>
+      <p data-lang="en">Many entrepreneurs lose time and money due to incomplete files, missing permits, or poorly drafted contracts. You don't have to be one of them. Contact us today — the first consultation is free and with no obligation.</p>
+      <div class="cta-buttons">
+        <a href="#contact" class="btn btn-gold" data-lang="ro">Solicită consultație gratuită →</a>
+        <a href="#contact" class="btn btn-gold" data-lang="en">Request free consultation →</a>
+        <a href="tel:+40723395929" class="btn btn-outline-white" data-lang="ro">📞 +40 723 395 929</a>
+        <a href="tel:+40723395929" class="btn btn-outline-white" data-lang="en">📞 +40 723 395 929</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Blog ──────────────────────────────────────────── -->
+<section class="section section--alt" id="blog">
+  <div class="container">
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:56px; flex-wrap:wrap; gap:24px;" class="reveal">
+      <div>
+        <span class="label" data-lang="ro">Resurse & Articole · 2026</span>
+        <span class="label" data-lang="en">Resources & Articles · 2026</span>
+        <span class="gold-line" style="margin-top:12px;"></span>
+        <h2 data-lang="ro">Ghiduri practice și actualizate pentru antreprenori</h2>
+        <h2 data-lang="en">Practical, up-to-date guides for entrepreneurs</h2>
+        <p style="margin-top:12px;" data-lang="ro">Informații esențiale scrise în limbaj accesibil — fără jargon juridic inutil.</p>
+        <p style="margin-top:12px;" data-lang="en">Essential information written in accessible language — no unnecessary legal jargon.</p>
+      </div>
+      <a href="#contact" class="btn btn-outline" data-lang="ro">Solicită consultație gratuită</a>
+      <a href="#contact" class="btn btn-outline" data-lang="en">Request free consultation</a>
+    </div>
+    <!-- Row 1: 3 cards -->
+    <div class="blog-grid reveal" style="margin-bottom:28px;">
+      <div class="blog-card">
+        <div class="blog-img">🚀</div>
+        <div class="blog-body">
+          <div class="blog-cat" data-lang="ro">Ghid complet · 2026</div>
+          <div class="blog-cat" data-lang="en">Complete guide · 2026</div>
+          <h3 data-lang="ro">Cum înregistrezi o firmă în România în 2026: pași, costuri și termene reale</h3>
+          <h3 data-lang="en">How to register a company in Romania in 2026: steps, costs, and real timelines</h3>
+          <p data-lang="ro">De la alegerea formei juridice potrivite până la obținerea CUI-ului — tot ce trebuie să știi înainte de a depune primul document.</p>
+          <p data-lang="en">From choosing the right legal form to obtaining the tax ID — everything you need to know before submitting your first document.</p>
+          <div class="blog-meta">
+            <span class="blog-date" data-lang="ro">Ianuarie 2026</span>
+            <span class="blog-date" data-lang="en">January 2026</span>
+            <a href="#contact" class="blog-link" data-lang="ro">Cere consultație →</a>
+            <a href="#contact" class="blog-link" data-lang="en">Request consultation →</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">⚖️</div>
+        <div class="blog-body">
+          <div class="blog-cat" data-lang="ro">Analiză comparativă · 2026</div>
+          <div class="blog-cat" data-lang="en">Comparative analysis · 2026</div>
+          <h3 data-lang="ro">SRL vs PFA în 2026: care este forma juridică potrivită pentru afacerea ta?</h3>
+          <h3 data-lang="en">SRL vs PFA in 2026: which legal form is right for your business?</h3>
+          <p data-lang="ro">Impozitare, răspundere, costuri de administrare și flexibilitate — o analiză completă și actualizată cu legislația în vigoare în 2026.</p>
+          <p data-lang="en">Taxation, liability, administration costs, and flexibility — a complete analysis updated with legislation in force in 2026.</p>
+          <div class="blog-meta">
+            <span class="blog-date" data-lang="ro">Februarie 2026</span>
+            <span class="blog-date" data-lang="en">February 2026</span>
+            <a href="#contact" class="blog-link" data-lang="ro">Cere consultație →</a>
+            <a href="#contact" class="blog-link" data-lang="en">Request consultation →</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">📋</div>
+        <div class="blog-body">
+          <div class="blog-cat" data-lang="ro">Autorizații & Avize · 2026</div>
+          <div class="blog-cat" data-lang="en">Permits & Licenses · 2026</div>
+          <h3 data-lang="ro">Ce autorizații și avize sunt obligatorii în România? Ghid pe domenii de activitate</h3>
+          <h3 data-lang="en">What permits and licenses are mandatory in Romania? A guide by business sector</h3>
+          <p data-lang="ro">Comerț, HoReCa, construcții, sănătate, transport, servicii profesionale — descoperă cerințele legale specifice domeniului tău.</p>
+          <p data-lang="en">Trade, hospitality, construction, healthcare, transport, professional services — discover the specific legal requirements for your sector.</p>
+          <div class="blog-meta">
+            <span class="blog-date" data-lang="ro">Februarie 2026</span>
+            <span class="blog-date" data-lang="en">February 2026</span>
+            <a href="#contact" class="blog-link" data-lang="ro">Cere consultație →</a>
+            <a href="#contact" class="blog-link" data-lang="en">Request consultation →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Row 2: 2 cards centered -->
+    <div class="blog-grid reveal" style="grid-template-columns: repeat(2,1fr); max-width:800px; margin:0 auto;">
+      <div class="blog-card">
+        <div class="blog-img">⚠️</div>
+        <div class="blog-body">
+          <div class="blog-cat" data-lang="ro">Greșeli frecvente</div>
+          <div class="blog-cat" data-lang="en">Common mistakes</div>
+          <h3 data-lang="ro">7 greșeli juridice pe care le fac antreprenorii la început de drum — și cum le eviți</h3>
+          <h3 data-lang="en">7 legal mistakes entrepreneurs make when starting out — and how to avoid them</h3>
+          <p data-lang="ro">Sediu neconform, coduri CAEN greșite, contracte fără clauze de protecție, autorizații lipsă — erori care costă timp, bani și reputație.</p>
+          <p data-lang="en">Non-compliant office, wrong CAEN codes, contracts without protective clauses, missing authorizations — mistakes that cost time, money, and reputation.</p>
+          <div class="blog-meta">
+            <span class="blog-date" data-lang="ro">Martie 2026</span>
+            <span class="blog-date" data-lang="en">March 2026</span>
+            <a href="#contact" class="blog-link" data-lang="ro">Cere consultație →</a>
+            <a href="#contact" class="blog-link" data-lang="en">Request consultation →</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">✅</div>
+        <div class="blog-body">
+          <div class="blog-cat" data-lang="ro">Conformitate · 2026</div>
+          <div class="blog-cat" data-lang="en">Compliance · 2026</div>
+          <h3 data-lang="ro">Cum menții firma în legalitate în 2026: obligații administrative pe care nu le poți ignora</h3>
+          <h3 data-lang="en">How to keep your company compliant in 2026: administrative obligations you cannot ignore</h3>
+          <p data-lang="ro">Depuneri la ONRC, actualizare date, reînnoire autorizații, obligații ANAF — lista completă a ce trebuie să faci în fiecare an pentru a evita sancțiunile.</p>
+          <p data-lang="en">Filings to ONRC, data updates, authorization renewals, ANAF obligations — the complete list of what you must do every year to avoid penalties.</p>
+          <div class="blog-meta">
+            <span class="blog-date" data-lang="ro">Martie 2026</span>
+            <span class="blog-date" data-lang="en">March 2026</span>
+            <a href="#contact" class="blog-link" data-lang="ro">Cere consultație →</a>
+            <a href="#contact" class="blog-link" data-lang="en">Request consultation →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Contact ───────────────────────────────────────── -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-info reveal">
+        <span class="label" data-lang="ro">Contactează-ne</span>
+        <span class="label" data-lang="en">Contact us</span>
+        <span class="gold-line" style="margin-top:12px;"></span>
+        <h2 data-lang="ro">Hai să discutăm. Prima consultație este gratuită.</h2>
+        <h2 data-lang="en">Let's talk. The first consultation is free.</h2>
+        <p data-lang="ro">Nu ești sigur de ce formă juridică ai nevoie? Nu știi ce autorizații îți lipsesc? Nu înțelegi un contract primit? Spune-ne situația ta — îți oferim claritate, nu complicații.</p>
+        <p data-lang="en">Not sure what legal form you need? Don't know which permits you're missing? Don't understand a contract you received? Tell us your situation — we offer clarity, not complications.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-item-text">
+              <strong data-lang="ro">Email</strong>
+              <strong data-lang="en">Email</strong>
+              <a href="mailto:sabinapopa79@gmail.com">sabinapopa79@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-item-text">
+              <strong data-lang="ro">Telefon</strong>
+              <strong data-lang="en">Phone</strong>
+              <a href="tel:+40723395929" data-lang="ro">+40 723 395 929</a>
+              <a href="tel:+40723395929" data-lang="en">+40 723 395 929</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💬</div>
+            <div class="contact-item-text">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/40723395929" target="_blank" data-lang="ro">Trimite mesaj pe WhatsApp</a>
+              <a href="https://wa.me/40723395929" target="_blank" data-lang="en">Send a WhatsApp message</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div class="contact-item-text">
+              <strong data-lang="ro">Program</strong>
+              <strong data-lang="en">Working hours</strong>
+              <p data-lang="ro">Luni – Vineri: 09:00 – 18:00</p>
+              <p data-lang="en">Monday – Friday: 09:00 – 18:00</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-guarantee">
+          <p data-lang="ro"><strong>✓ Răspuns garantat în maxim 24h</strong> — Fiecare cerere este tratată cu atenție și profesionalism. Vei primi un răspuns concret și o ofertă adaptată exact situației tale — fără formule generice.</p>
+          <p data-lang="en"><strong>✓ Guaranteed response within 24h</strong> — Every request is handled with care and professionalism. You'll receive a concrete answer and an offer tailored exactly to your situation — no generic responses.</p>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal reveal-delay-2">
+        <h3 data-lang="ro">Trimite-ne un mesaj</h3>
+        <h3 data-lang="en">Send us a message</h3>
+        <p data-lang="ro">Completează formularul și te contactăm în cel mai scurt timp.</p>
+        <p data-lang="en">Fill in the form and we'll contact you as soon as possible.</p>
+        <form id="contactForm" action="https://formspree.io/f/mojpnkbw" method="POST">
+          <!-- Formspree helper fields -->
+          <input type="hidden" name="_subject" value="Mesaj nou de pe site Fresh Beginning SRL" />
+          <input type="hidden" name="_language" value="ro" />
+          <input type="text" name="_gotcha" style="display:none" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" data-lang="ro">Numele tău</label>
+              <label for="name" data-lang="en">Your name</label>
+              <input type="text" id="name" name="name" placeholder="Ion Popescu" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="_replyto" placeholder="ion@exemplu.ro" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone" data-lang="ro">Telefon</label>
+              <label for="phone" data-lang="en">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+40 7xx xxx xxx" />
+            </div>
+            <div class="form-group">
+              <label for="service" data-lang="ro">Serviciu de interes</label>
+              <label for="service" data-lang="en">Service of interest</label>
+              <select id="service" name="service">
+                <option value="" data-lang="ro">Selectează un serviciu...</option>
+                <option value="" data-lang="en">Select a service...</option>
+                <option value="Înregistrare firmă (SRL, PFA, II, ORC)">Înregistrare firmă (SRL, PFA, II, ORC)</option>
+                <option value="Modificări statutare">Modificări statutare (sediu, administrator, capital, obiect)</option>
+                <option value="Certificate & Documente ORC">Certificate & Documente ORC</option>
+                <option value="Autorizații, Avize & Licențe">Autorizații, Avize & Licențe</option>
+                <option value="Servicii Administrative & Fiscale">Servicii Administrative & Fiscale</option>
+                <option value="Contracte Comerciale">Contracte Comerciale sub semnătură privată</option>
+                <option value="Alt serviciu / Nu știu încă">Alt serviciu / Nu știu încă</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message" data-lang="ro">Mesajul tău</label>
+            <label for="message" data-lang="en">Your message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Descrie pe scurt situația ta sau întrebările pe care le ai..." required></textarea>
+          </div>
+          <div class="form-consent">
+            <input type="checkbox" id="consent" required />
+            <label for="consent" data-lang="ro">Sunt de acord cu prelucrarea datelor mele personale în scopul contactării de către Fresh Beginning SRL, conform GDPR.</label>
+            <label for="consent" data-lang="en">I agree to the processing of my personal data for the purpose of being contacted by Fresh Beginning SRL, in accordance with GDPR.</label>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center; padding:16px;" data-lang="ro">Trimite mesajul →</button>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center; padding:16px;" data-lang="en">Send message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo-text">Fresh Beginning SRL</div>
+        <div class="footer-logo-sub" data-lang="ro">Consultanță în Afaceri · CAEN 7020</div>
+        <div class="footer-logo-sub" data-lang="en">Business Consulting · CAEN 7020</div>
+        <p data-lang="ro">Partenerul tău de încredere pentru înregistrare firme, redactare contracte, obținere autorizații și administrarea corectă a afacerii tale în România — cu transparență totală și zero costuri ascunse.</p>
+        <p data-lang="en">Your trusted partner for company registration, contract drafting, permit obtainment, and the correct management of your business in Romania — with full transparency and zero hidden costs.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-lang="ro">Servicii</h4>
+        <h4 data-lang="en">Services</h4>
+        <ul>
+          <li><a href="#services" data-lang="ro">Înregistrare firme (SRL, ORC)</a><a href="#services" data-lang="en">Company registration (SRL, ORC)</a></li>
+          <li><a href="#services" data-lang="ro">Modificări statutare</a><a href="#services" data-lang="en">Statutory modifications</a></li>
+          <li><a href="#services" data-lang="ro">Certificate & Documente ORC</a><a href="#services" data-lang="en">ORC Certificates & Documents</a></li>
+          <li><a href="#services" data-lang="ro">Autorizații, Avize & Licențe</a><a href="#services" data-lang="en">Permits, Endorsements & Licenses</a></li>
+          <li><a href="#services" data-lang="ro">Servicii Administrative & Fiscale</a><a href="#services" data-lang="en">Administrative & Fiscal Services</a></li>
+          <li><a href="#services" data-lang="ro">Contracte Comerciale</a><a href="#services" data-lang="en">Commercial Contracts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-lang="ro">Companie</h4>
+        <h4 data-lang="en">Company</h4>
+        <ul>
+          <li><a href="#about" data-lang="ro">Despre noi</a><a href="#about" data-lang="en">About us</a></li>
+          <li><a href="#approach" data-lang="ro">Angajamentul nostru</a><a href="#approach" data-lang="en">Our commitment</a></li>
+          <li><a href="#process" data-lang="ro">Cum lucrăm</a><a href="#process" data-lang="en">How we work</a></li>
+          <li><a href="#blog" data-lang="ro">Articole & Ghiduri</a><a href="#blog" data-lang="en">Articles & Guides</a></li>
+          <li><a href="#contact" data-lang="ro">Contact</a><a href="#contact" data-lang="en">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-lang="ro">Contact direct</h4>
+        <h4 data-lang="en">Direct contact</h4>
+        <ul>
+          <li><a href="tel:+40723395929" style="color:var(--gold); font-weight:600; font-size:.95rem;">📞 +40 723 395 929</a></li>
+          <li><a href="mailto:sabinapopa79@gmail.com">sabinapopa79@gmail.com</a></li>
+          <li><a href="https://wa.me/40723395929" target="_blank">💬 WhatsApp</a></li>
+          <li style="color:rgba(255,255,255,0.4); font-size:.82rem; margin-top:8px;" data-lang="ro">Lun–Vin, 09:00–18:00</li>
+          <li style="color:rgba(255,255,255,0.4); font-size:.82rem; margin-top:8px;" data-lang="en">Mon–Fri, 09:00–18:00</li>
+          <li style="margin-top:16px;"><a href="#contact" class="btn btn-gold" style="padding:10px 20px; font-size:.82rem;" data-lang="ro">Solicită consultație</a><a href="#contact" class="btn btn-gold" style="padding:10px 20px; font-size:.82rem;" data-lang="en">Request consultation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-lang="ro">© 2026 <span class="footer-gold">Fresh Beginning SRL</span>. Toate drepturile rezervate. · CAEN 7020</p>
+      <p data-lang="en">© 2026 <span class="footer-gold">Fresh Beginning SRL</span>. All rights reserved. · CAEN 7020</p>
+      <p data-lang="ro" style="opacity:.5;">Confidențialitate · GDPR · Termeni și condiții</p>
+      <p data-lang="en" style="opacity:.5;">Privacy · GDPR · Terms and conditions</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── WhatsApp FAB ───────────────────────────────────── -->
+<a href="https://wa.me/40723395929" target="_blank" class="whatsapp-fab" title="WhatsApp" aria-label="Contact us on WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="white"/>
+  </svg>
+</a>
+
+<!-- ─── Mobile Sticky CTA Bar ─────────────────────────── -->
+<div class="mobile-sticky-cta" id="mobileStickyCta">
+  <a href="tel:+40723395929" class="cta-call">📞 Sună acum</a>
+  <a href="https://wa.me/40723395929" target="_blank" class="cta-whatsapp">💬 WhatsApp</a>
+  <a href="#contact" class="cta-form" data-lang="ro">✉ Formular</a>
+  <a href="#contact" class="cta-form" data-lang="en">✉ Form</a>
+</div>
+
+<!-- ─── JSON-LD Structured Data ──────────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Fresh Beginning SRL",
+  "description": "Consultanță profesională pentru înregistrare firme, modificări juridice, redactare contracte comerciale, obținere autorizații și administrare legală a afacerilor în România.",
+  "url": "https://freshbeginning.ro",
+  "telephone": "+40723395929",
+  "email": "sabinapopa79@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "RO"
+  },
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "priceRange": "$$",
+  "serviceType": [
+    "Înregistrare firme",
+    "Redactare contracte comerciale",
+    "Obținere autorizații și avize",
+    "Modificări juridice ONRC",
+    "Dizolvare și lichidare voluntară",
+    "Consultanță în afaceri"
+  ],
+  "availableLanguage": ["Romanian", "English"],
+  "sameAs": []
+}
+</script>
+
+<!-- ─── Scripts ────────────────────────────────────────── -->
+<script>
+  // ── Language Switcher ─────────────────────────────
+  function setLang(lang) {
+    document.body.className = lang === 'en' ? 'lang-en' : '';
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+    });
+    localStorage.setItem('fb-lang', lang);
+  }
+
+  // Restore saved language
+  const savedLang = localStorage.getItem('fb-lang');
+  if (savedLang === 'en') setLang('en');
+
+  // ── Navigation scroll effect ──────────────────────
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // ── Mobile menu ───────────────────────────────────
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // ── Service Tabs ──────────────────────────────────
+  function showTab(id, evt) {
+    document.querySelectorAll('.service-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.service-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    if (evt && evt.target) evt.target.classList.add('active');
+  }
+
+  // ── Scroll Reveal ─────────────────────────────────
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // ── Smooth anchor offset for fixed nav ───────────
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
